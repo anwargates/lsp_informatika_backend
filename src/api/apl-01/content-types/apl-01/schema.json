@@ -1,0 +1,133 @@
+{
+  "kind": "collectionType",
+  "collectionName": "apl_01s",
+  "info": {
+    "singularName": "apl-01",
+    "pluralName": "apl-01s",
+    "displayName": "APL01",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "namaLengkap": {
+      "type": "string"
+    },
+    "NIK": {
+      "type": "string"
+    },
+    "tempatLahir": {
+      "type": "string"
+    },
+    "tanggalLahir": {
+      "type": "date"
+    },
+    "jenisKelamin": {
+      "type": "enumeration",
+      "enum": [
+        "L",
+        "P"
+      ]
+    },
+    "alamat": {
+      "type": "text"
+    },
+    "nomorTelpon": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "pendidikanTerakhir": {
+      "type": "string"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "apl_01s"
+    },
+    "namaPerusahaan": {
+      "type": "string"
+    },
+    "jabatan": {
+      "type": "string"
+    },
+    "alamatKantor": {
+      "type": "text"
+    },
+    "pekerjaan": {
+      "type": "string"
+    },
+    "skemaSertifikasi": {
+      "type": "enumeration",
+      "enum": [
+        "KKNI",
+        "Okupasi",
+        "Klaster"
+      ]
+    },
+    "tujuanAsesmen": {
+      "type": "enumeration",
+      "enum": [
+        "Sertifikat Baru",
+        "Sertifikat Ulang"
+      ]
+    },
+    "ijazah": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "pasFoto": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "identitas": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "transkrip": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "ttdAsesi": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "apl_01_approval": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::apl-01-approval.apl-01-approval",
+      "inversedBy": "apl_01"
+    }
+  }
+}
